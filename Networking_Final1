@@ -1,0 +1,43 @@
+import statistics 
+import matplotlib.pyplot as plt
+import numpy as np
+import cv2
+from numpy.fft import fft2, fftshift
+import os
+plt.plot([1,64], scalex = True, scaley = True)
+plt.xticks(range(1, 64, 1))
+plt.yticks(range(1, 64, 1))
+plt.show() #DCT range of coefficient indicies
+ 
+for x2 in range(64):
+    np.fft(range(1,64, n=None, axis=-1, norm=None + x2))
+    plt.show(np.fft) ## range of distortion values
+        
+for x1 in range(64):
+    variance = statistics.variance(x1)
+    max = statistics.max(x1)
+    print(variance + "variance") #variance
+    print(max + "max"); #max variance
+    
+print(os.listdir("../input"))
+
+class image():
+    def image(img):
+        plt.figure(figsize=(20,20)
+        plt.imshow(img)
+        plt.xticks([]), plt.yticks([]) # show x and y ticks
+        plt.show() 
+        
+fourier_transform = fft2(X)
+    image_display(X, "Transformed image",
+                  fftshift(np.log(1e-7 + abs(X))), "DCT Transformer") # this is the DCT transformer
+        
+def Quantization(Quant_Array): # this is the quantization step
+    Q_A= np.array(1,64)
+    Q_Factor = 2;
+if(Q_Factor < 30):
+    Z = 2000/Q_Factor;
+else                
+Z= 256-2*Q_Factor;
+    end()
+    
