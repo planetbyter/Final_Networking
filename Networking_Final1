@@ -4,10 +4,11 @@ import numpy as np
 import cv2
 from numpy.fft import fft2, fftshift
 import os
+
 plt.plot([1,64], scalex = True, scaley = True)
 plt.xticks(range(1, 64, 1))
 plt.yticks(range(1, 64, 1))
-plt.show() #DCT range of coefficient indicies
+plt.show(fft2(range(1,64))) #DCT range of coefficient indicies
  
 for x2 in range(64):
     np.fft(range(1,64, n=None, axis=-1, norm=None + x2))
@@ -25,17 +26,16 @@ class image():
     def image(img):
         plt.figure(figsize=(20,20)
         plt.imshow(img)
-        plt.xticks([]), plt.yticks([]) # show x and y ticks
+        plt.xticks([]), plt.yticks([]) # show x and y ticks, RD functions plotted // distortion 
         plt.show() 
         
 fourier_transform = fft2(X)
     image_display(X, "Transformed image",
-                  fftshift(np.log(1e-7 + abs(X))), "DCT Transformer") # this is the DCT transformer
-        
-def Quantization(Quant_Array): # this is the quantization step
-    Q_A= np.array(1,64)
+                  fftshift(np.log(1e-7 + abs(X))), "DCT Transformer") # this is the DCT transformer   
+def Quantization(X): # this is the quantization step
+    X = np.array(1,64)
     Q_Factor = 2;
-if(Q_Factor < 30):
+if (Q_Factor < 30):
     Z = 2000/Q_Factor;
 else                
 Z= 256-2*Q_Factor;
